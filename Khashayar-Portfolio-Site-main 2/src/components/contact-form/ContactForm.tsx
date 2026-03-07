@@ -122,7 +122,7 @@ export default function ContactSection({ enable }: { enable: boolean }) {
     const email = formData.get(`email`);
     if (isValidEmail(email === null ? `` : email.toString())) {
       setIsSubmitted(true);
-      const request = new Request(`/apis/sendgrid/mail`, {
+      const request = new Request(`/api/sendgrid/mail`, {
         method: `POST`,
         body: formData,
       });
