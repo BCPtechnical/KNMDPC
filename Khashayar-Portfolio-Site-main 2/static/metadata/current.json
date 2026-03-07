@@ -1,0 +1,78 @@
+{
+  "title": "Current Research & Publications",
+  "timelineItems": [
+    {
+      "period": "2023 - Present",
+      "projects": [
+        {
+          "title": "OCD Treatment Protocols",
+          "description": "Developing evidence-based treatment protocols for OCD with a focus on exposure and response prevention therapy.",
+          "journal": {
+            "title": "Journal of Psychiatric Research (2023)",
+            "details": "Novel approaches to exposure therapy for treatment-resistant OCD",
+            "link": "#"
+          }
+        },
+        {
+          "title": "Body Dysmorphic Disorder Research",
+          "description": "Leading a clinical trial on cognitive-behavioral interventions for BDD patients with comorbid depression."
+        }
+      ]
+    },
+    {
+      "period": "2020 - 2023",
+      "projects": [
+        {
+          "title": "Hoarding Disorder Study",
+          "description": "Longitudinal assessment of cognitive restructuring techniques in treating hoarding behaviors.",
+          "journal": {
+            "title": "American Journal of Psychiatry (2022)",
+            "details": "Cognitive restructuring versus exposure therapy in hoarding disorder: A comparative analysis",
+            "link": "#"
+          }
+        },
+        {
+          "title": "ADHD in Adult OCD Patients",
+          "description": "Research on the prevalence and management of comorbid ADHD in adult OCD patients.",
+          "journal": {
+            "title": "Journal of Clinical Psychology (2021)",
+            "details": "The impact of ADHD on treatment outcomes in adult OCD: A multi-center study",
+            "link": "#"
+          }
+        }
+      ]
+    },
+    {
+      "period": "2016 - 2020",
+      "projects": [
+        {
+          "title": "Trichotillomania Treatment Development",
+          "description": "Development and testing of a combined pharmacological and behavioral intervention for hair-pulling disorder.",
+          "journal": {
+            "title": "Journal of Behavioral Therapy (2019)",
+            "details": "Integrative treatment approach for trichotillomania: A case series",
+            "link": "#"
+          }
+        },
+        {
+          "title": "Excoriation Disorder Research",
+          "description": "Investigation of mindfulness-based interventions for skin-picking behaviors."
+        }
+      ]
+    },
+    {
+      "period": "2012 - 2016",
+      "projects": [
+        {
+          "title": "Early Career Research",
+          "description": "Initial studies on anxiety disorders and OCD spectrum conditions.",
+          "journal": {
+            "title": "Psychiatry Research (2015)",
+            "details": "Neurobiological correlates of OCD: A review and meta-analysis",
+            "link": "#"
+          }
+        }
+      ]
+    }
+  ]
+}

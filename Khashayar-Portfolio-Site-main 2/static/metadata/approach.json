@@ -1,0 +1,47 @@
+{
+  "metadata": [
+    {
+      "name": "title",
+      "content": "Treatment Approach | Khashayar Nattagh MD"
+    },
+    {
+      "name": "description",
+      "content": "Learn about Dr. Khashayar Nattagh's comprehensive treatment approach including neurology, biology, psychology, and sociology."
+    }
+  ],
+  "pageTitle": "TREATMENT APPROACH",
+  "pageDescription": "As with most psychiatric disorders, there is some contribution from our genetics and some from our environment. Our biology, our social environment, our brain circuitry, and our psychology should be considered when designing a treatment plan.",
+  "services": [
+    {
+      "title": "bio",
+      "fullTitle": "considering the biological component ",
+      "description": "Your mental health can be affected by imbalances in brain chemicals (neurotransmitters), hormones, or even essential vitamins. As your doctor, I consider how these biologic factors contribute to your symptoms, which are less important, and how medication might help rebalance them.\n\nKeep in mind that medications may, or may not, be part of your overall treatment plan.",
+      "imageName": "treatmentB"
+    },
+    {
+      "title": "psyche",
+      "fullTitle": "considering psychologic framework ",
+      "description": "Avoiding uncomfortable thoughts and feelings offers temporary relief but can worsen problems over time. My therapeutic aim is to help you uncover what you're avoiding, its reasons, and how to achieve peace. \n\n I'll recommend specific modalities based on your condition. This could include exposure and response-prevention for OCD, a psychodynamic approach for persistent relationship challenges, or a specialized cognitive behavioral therapy for body image concerns. \n\n For those referred by another therapist, I'll manage the biological aspects of your treatment while coordinating closely with them to align our strategies.",
+      "imageName": "treatmentC"
+    },
+    {
+      "title": "socio",
+      "fullTitle": "considering your environment",
+      "description": "Your support system plays a huge role in long-term healing. For instance, a 2015 Yale study on OCD and anxiety found that family reactions were the strongest predictor of treatment success.  \n\nThis is so impactful that some teenagers with OCD and anxiety improved simply by having family members work with a specialist. These sessions teach families to show love and support without unintentionally reinforcing unhelpful behaviors. It's a small, learnable change with big results. \n\nTherefore, for certain conditions, I might recommend including loved ones in your treatment.",
+      "imageName": "treatmentD"
+    },
+    {
+      "title": "neuro",
+      "fullTitle": "considering neuroanatomy ",
+      "description": "Our brains contain a circuit called the cortico-striatal-thalamo-cortical (CSTC) pathway, often overactive in OCD. Treatments directly adjusting this circuit for healthy brain activity are 'neuromodulation.'\n\nFor OCD, the FDA has approved transcranial magnetic stimulation (TMS), a non-invasive procedure with few side effects, and deep-brain stimulation (DBS), an invasive surgery recommended only if other treatment options fail. \n\nI don't offer TMS or DBS. However, if neuromodulation seems helpful for your plan, I can refer you to a specialized colleague.",
+      "imageName": "treatmentA"
+    },
+    {
+      "title": "TREATMENT",
+      "fullTitle": "considering all components",
+      "description": "As with most psychiatric conditions, there is some contribution from our genetics and some from our environment. We will work together to understand which components (biologic, psychologic, social, and/or neural) are playing a role in your condition, and how we can treat them accordingly so that you can get to where you want to be.  ",
+      "imageName": "treatmentE",
+      "large": true
+    }
+  ]
+}
