@@ -66,40 +66,51 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     const recipientEmail = context.env.RECIPIENT_EMAIL;
     const message = contextForm.get(`message`) || ``;
 
-    // Debug: Check if env vars are set
+    // ── 1. Env var checks ──────────────────────────────────────────────────
     if (!sendgridApiToken) {
-      return new Response(`Debug: SENDGRID_API_TOKEN is not set`, { status: 500 });
+      console.error(`[mail.ts] SENDGRID_API_TOKEN is not set`);
+      return new Response(`SENDGRID_API_TOKEN is not set`, { status: 500 });
     }
     if (!senderEmail) {
-      return new Response(`Debug: SENDER_EMAIL is not set`, { status: 500 });
+      console.error(`[mail.ts] SENDER_EMAIL is not set`);
+      return new Response(`SENDER_EMAIL is not set`, { status: 500 });
     }
     if (!recipientEmail) {
-      return new Response(`Debug: RECIPIENT_EMAIL is not set`, { status: 500 });
+      console.error(`[mail.ts] RECIPIENT_EMAIL is not set`);
+      return new Response(`RECIPIENT_EMAIL is not set`, { status: 500 });
     }
 
+    // ── 2. Form field checks ───────────────────────────────────────────────
     if (requestorEmail === `` || message === ``) {
+      console.error(`[mail.ts] Missing form fields`);
       return new Response(`Missing FormData`, { status: 400 });
     }
 
+    // ── 3. Build and send SendGrid request ────────────────────────────────
     const sendgridRequest = createSendgridRequest(
-      requestorEmail,
+      requestorEmail as string,
       sendgridApiToken,
       senderEmail,
       recipientEmail,
-      message,
+      message as string,
     );
     const sendgridResponse = await sendSendgridRequest(sendgridRequest);
 
-    // Debug: If SendGrid returns an error, include the response body
+    // ── 4. Return exact SendGrid error so client can see what went wrong ───
     if (!sendgridResponse.ok) {
       const errorBody = await sendgridResponse.text();
+      console.error(`[mail.ts] SendGrid error ${sendgridResponse.status}:`, errorBody);
       return new Response(`SendGrid error: ${sendgridResponse.status} - ${errorBody}`, {
         status: sendgridResponse.status,
       });
     }
 
-    return sendgridResponse;
-  } catch {
-    return new Response(`Application Error.`, { status: 400 });
+    console.log(`[mail.ts] Email sent successfully`);
+    return new Response(`OK`, { status: 200 });
+
+  } catch (err: unknown) {
+    const errMessage = err instanceof Error ? err.message : String(err);
+    console.error(`[mail.ts] Unexpected error:`, errMessage);
+    return new Response(`Application Error: ${errMessage}`, { status: 500 });
   }
 };
