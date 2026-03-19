@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    // "target": "esnext",
+    "lib": ["dom", "esnext"],
+    "jsx": "react-jsx",
+    "module": "es6",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/static/*": ["./static/*"]
+    },
+    "types": ["@cloudflare/workers-types", "jest", "@types/jest"]
+  },
+  "exclude": ["node_modules", "functions/**/*"],
+  "include": ["./src/**/*", "./__helpers__/*", "typings/**/*.d.ts"]
+}

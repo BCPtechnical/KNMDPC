@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Primary';
+  font-style: normal;
+  font-display: auto;
+  font-weight: 500;
+  src: url(../fonts/Primary.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Secondary';
+  font-style: normal;
+  font-display: auto;
+  font-weight: 500;
+  src: url(../fonts/Secondary.ttf) format('truetype');
+}
+body {
+  --primary-color:#27221F;
+  --secondary-color: red;
+  font-family: Primary;
+}
