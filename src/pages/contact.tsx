@@ -36,6 +36,7 @@ export default function ContactPage() {
   return isBrowser ? (
     <Layout>
       <Container>
+      
         <Title>Contact Us</Title>
         <ContactSection enable={true} />
       </Container>
