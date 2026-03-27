@@ -1,6 +1,5 @@
 import Seo from '@/components/seo/Seo';
 import Layout from '@/layouts/Layout';
-import ContactSection from '@/components/contact-form/ContactForm';
 import Metadata from '@/static/metadata/template-metadata.json';
 import styled from 'styled-components';
 
@@ -11,11 +10,9 @@ const Container = styled.div`
   justify-content: center;
   width: 100%;
   max-width: 1232px;
-  height: calc(100vh - 60px); /* Match navbar height from Layout.tsx */
   margin: 0 auto;
   padding: 2rem;
   box-sizing: border-box;
-  overflow: hidden;
 `;
 
 const Title = styled.h1`
@@ -30,15 +27,47 @@ const Title = styled.h1`
   color: #333;
 `;
 
+const IframeContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: #f9f9f9;
+  border-radius: 8px;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+`;
+
+const StyledIframe = styled.iframe`
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  min-height: 600px;
+  border: none;
+  display: block !important;
+`;
+
 export default function ContactPage() {
   const isBrowser = typeof window !== `undefined`;
 
   return isBrowser ? (
     <Layout>
       <Container>
-      
         <Title>Contact Us</Title>
-        <ContactSection enable={true} />
+        <IframeContainer>
+          <StyledIframe
+            src="https://8534e653.sibforms.com/serve/MUIFADbymuB_KOHfyO2IQr0onZkPmqTJHp51_JbUWoX0hfMlrGy_SMVaUDwYrnnolPtPUGQg6oxmtc_7gdkEYj9hos_Q691-TMR9oZ7KV4jovjPX55fx25u1xJr8jJEjTl8HJvvNBVYz8VSRFYiDGDmiYAJMLpJw8bi5_u3z_bVBGUReEIo0RxgABamBXmssmWWFKLIWMds8Tv4-_g=="
+            frameBorder="0"
+            scrolling="auto"
+            allowFullScreen={true}
+            title="Contact Form"
+          />
+        </IframeContainer>
       </Container>
     </Layout>
   ) : null;
