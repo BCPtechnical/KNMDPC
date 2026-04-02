@@ -7,24 +7,31 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
   max-width: 1232px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 2rem 0;
   box-sizing: border-box;
+  overflow: hidden;
 `;
 
 const Title = styled.h1`
+  font-family: Primary;
   font-size: 2.2rem;
-  margin-top: 0;
-  margin-bottom: 3rem;
-  text-align: center;
-  text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 0.4vw;
-  font-family: Primary;
-  color: #333;
+  text-transform: uppercase;
+  text-align: center;
+  color: #4a4a4a;
+  margin: 0 0 0.4rem;
+  padding-top: 3rem;
+`;
+
+const Divider = styled.div`
+  width: 40px;
+  height: 1px;
+  background-color: #107379;
+  margin: 0 auto 0.5rem;
 `;
 
 const IframeContainer = styled.div`
@@ -32,24 +39,19 @@ const IframeContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: auto;
-  padding: 2rem;
-  box-sizing: border-box;
-  background: #f9f9f9;
-  border-radius: 8px;
-
-  @media (max-width: 768px) {
-    padding: 1rem;
-  }
+  overflow: hidden;
+  background: transparent;
 `;
 
 const StyledIframe = styled.iframe`
   width: 100%;
   max-width: 600px;
-  height: auto;
-  min-height: 600px;
+  height: 600px;
   border: none;
   display: block !important;
+  background: transparent;
+  color-scheme: normal;
+  overflow: hidden;
 `;
 
 export default function ContactPage() {
@@ -59,11 +61,12 @@ export default function ContactPage() {
     <Layout>
       <Container>
         <Title>Contact Us</Title>
+        <Divider />
         <IframeContainer>
           <StyledIframe
             src="https://8534e653.sibforms.com/serve/MUIFADbymuB_KOHfyO2IQr0onZkPmqTJHp51_JbUWoX0hfMlrGy_SMVaUDwYrnnolPtPUGQg6oxmtc_7gdkEYj9hos_Q691-TMR9oZ7KV4jovjPX55fx25u1xJr8jJEjTl8HJvvNBVYz8VSRFYiDGDmiYAJMLpJw8bi5_u3z_bVBGUReEIo0RxgABamBXmssmWWFKLIWMds8Tv4-_g=="
             frameBorder="0"
-            scrolling="auto"
+            scrolling="no"
             allowFullScreen={true}
             title="Contact Form"
           />
