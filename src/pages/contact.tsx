@@ -10,8 +10,9 @@ const Container = styled.div`
   width: 100%;
   max-width: 1232px;
   margin: 0 auto;
-  padding: 2rem 2rem 0;
+  padding: 0.5rem 2rem 0;
   box-sizing: border-box;
+  height: calc(100vh - 60px);
   overflow: hidden;
 `;
 
@@ -24,7 +25,7 @@ const Title = styled.h1`
   text-align: center;
   color: #4a4a4a;
   margin: 0 0 0.4rem;
-  padding-top: 3rem;
+  padding-top: 1rem;
 `;
 
 const Divider = styled.div`
@@ -36,22 +37,22 @@ const Divider = styled.div`
 
 const IframeContainer = styled.div`
   width: 100%;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   background: transparent;
+  min-height: 0;
 `;
 
 const StyledIframe = styled.iframe`
   width: 100%;
   max-width: 600px;
-  height: 600px;
+  height: 100%;
   border: none;
   display: block !important;
   background: transparent;
   color-scheme: normal;
-  overflow: hidden;
 `;
 
 export default function ContactPage() {
