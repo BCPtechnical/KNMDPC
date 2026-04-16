@@ -27,13 +27,13 @@ const Title = styled.h1`
   text-transform: uppercase;
   text-align: center;
   color: #4a4a4a;
-  margin: 0 0 0.4rem;
-  padding-top: 0.5rem;
+  margin: 0;
+  padding-top: 1.5rem;
 
   @media (max-width: 768px) {
     font-size: 1.6rem;
-    padding-top: 0.3rem;
-    margin: 0 0 0.3rem;
+    padding-top: 1rem;
+    margin: 0;
   }
 `;
 
@@ -41,7 +41,7 @@ const Divider = styled.div`
   width: 40px;
   height: 1px;
   background-color: #107379;
-  margin: 0 auto 0.5rem;
+  margin: 0 auto 0;
 `;
 
 const IframeContainer = styled.div`
